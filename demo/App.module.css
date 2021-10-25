@@ -1,0 +1,43 @@
+.item {
+  background: #eeeeee;
+}
+
+p,
+span,
+div {
+  margin: 0;
+  padding: 0;
+  color: #666666;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link img {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
+
+.id {
+  font-size: 30px;
+  text-align: center;
+}
+
+.content {
+  padding: 0 20px 20px 20px;
+}
