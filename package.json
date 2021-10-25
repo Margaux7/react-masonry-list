@@ -2,6 +2,13 @@
   "name": "react-masonry-list",
   "main": "index.js",
   "version": "0.1.4",
+  "keywords": [
+    "react",
+    "masonry",
+    "layout",
+    "component",
+    "grid"
+  ],
   "scripts": {
     "start": "yarn build && concurrently 'webpack serve --config ./webpack/webpack.demo.config.js --mode development' 'webpack --config ./webpack/webpack.config.js --watch'",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
