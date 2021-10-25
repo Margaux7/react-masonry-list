@@ -1,7 +1,7 @@
 {
   "name": "react-masonry-list",
   "main": "index.js",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "scripts": {
     "start": "yarn build && concurrently 'webpack serve --config ./webpack/webpack.demo.config.js --mode development' 'webpack --config ./webpack/webpack.config.js --watch'",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
