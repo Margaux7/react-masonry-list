@@ -57,7 +57,7 @@ const List = () => {
 Refer to https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns#browser_compatibility
 
 ## Notice :exclamation:
-Due to the limitations of some browsers such as chrome (limits the grid to 1000 rows, and the excess part cannot be rendered correctly), this component is not suitable for long lists. You should use pagination when you use it to prevent the row of the page from being too long. Based on the calculation formula, the maximum height of the layout is gap * 1000. For example, if your gap is 10, then the maximum height of the layout is 10000.
+Due to the limitations of some browsers such as chrome (limits the grid to 1000 rows, and the excess part cannot be rendered correctly), this component is not suitable for long lists. You should use pagination when you use it to prevent the row of the page from being too long. Based on the calculation formula, the maximum height of the layout is gap * 1000. For example, if your gap is 10, then the maximum height of the layout is 10000px.
 ### more detail
 Refer to https://bugs.chromium.org/p/chromium/issues/detail?id=688640
 or https://github.com/rachelandrew/gridbugs/issues/28
