@@ -24,6 +24,8 @@ const items = [
   //...
 ]
 
+// If item contains img elements, don't forget set img's width. In order to get a better display effect, you can also set img's `object-fit` to `contain`.
+
 const List = () => {
   return (
     <Layout>
@@ -35,6 +37,7 @@ const List = () => {
     </Layout>
   )
 }
+
 ```
 
 ## Props

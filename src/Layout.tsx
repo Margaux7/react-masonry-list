@@ -116,7 +116,7 @@ const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
       className={_getClassName([style.layout, props.className])}
       ref={layoutRef}
       style={{
-        gridTemplateColumns: `repeat(${props.colCount || 2}, minmax(${
+        gridTemplateColumns: `repeat(${props.colCount || 3}, minmax(${
           minWidth || 300
         }px,1fr))`,
         gridGap: `${gap}px`,
