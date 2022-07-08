@@ -1,5 +1,5 @@
 module.exports = {
-  entry: process.cwd() + '/src/index.ts',
+  entry: process.cwd() + '/src/index.tsx',
   output: {
     filename: 'index.js',
     path: process.cwd() + '/dist',
