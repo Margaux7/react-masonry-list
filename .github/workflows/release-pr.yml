@@ -1,0 +1,17 @@
+name: Release PR
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  release-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v2
+        with:
+          release-type: node
+          token: ${{secrets.PAT}}
+          package-name: '@byteinspire/inspirecloud'
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":true}]'
