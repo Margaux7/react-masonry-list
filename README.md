@@ -6,19 +6,19 @@
 A Masonry component implemented through [css grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout), fast and responsive.
 :star2: Each element first fills the column with the largest remaining space in the vertical direction, which will ensure that the height difference of each column is minimal.
 
-![](https://user-images.githubusercontent.com/16912880/138633709-82e4b1dd-eb09-4ae5-a920-e6bad1464248.gif)
+![](https://user-images.githubusercontent.com/16912880/177976842-35ca3306-33ef-44c1-ab23-b19fb2f4366f.gif)
 
-:point_right: [demo page](https://qc5tst.web.cloudendpoint.cn/)
+:point_right: [demo page](https://react-masonry-list-b1bkks03c-margaux7.vercel.app/)
 
 ## Install
-`npm install react-masonry-list --save` 
+`npm install react-masonry-list --save`
 
 Or use yarn
 `yarn add react-masonry-list`
 
 ## Usage
 ```js
-import { Layout, Item } from 'react-masonry-list'
+import Layout from 'react-masonry-list'
 
 const items = [
   //...
@@ -28,12 +28,42 @@ const items = [
 
 const List = () => {
   return (
-    <Layout>
-      <Item>
-        {items.map(el => (
-          //...
-        ))}
-      </Item>
+    <Layout
+      minWidth={100}
+      items={items.map(item => (
+        <div key={item.id}>...</div>
+      ))}
+    >
+    </Layout>
+  )
+}
+
+```
+
+### Use with NextJS
+Because it's a client side only component, when using it with NextJS, you need to import it by `dynamic` API:
+
+```js
+import dynamic from 'next/dynamic';
+
+const Layout = dynamic(() => import('react-masonry-list'), {
+  ssr: false,
+});
+
+const items = [
+  //...
+]
+
+// If item contains img elements, don't forget set img's width. In order to get a better display effect, you can also set img's `object-fit` to `contain`.
+
+const List = () => {
+  return (
+    <Layout
+      minWidth={100}
+      items={items.map(item => (
+        <div key={item.id}>...</div>
+      ))}
+    >
     </Layout>
   )
 }
@@ -42,25 +72,13 @@ const List = () => {
 
 ## Props
 
-### Layout
-
 |name|type|required|default|description|
 |--|--|--|--|--|
+|items|react node array|No|[]|The items you want to render|
 |colCount|number|No|3|Column count|
 |gap|number|No|10|The size(px) of the gap between elements|
 |minWidth|number|No|300|The min width(px) of columns|
 |className|string|No| \ |Custom class name of layout container|
 
-### Item
-|name|type|required|default|description|
-|--|--|--|--|--|
-|className|string|No| \ |Custom class name of items|
-
 ## Browser compatibility
 Refer to https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns#browser_compatibility
-
-## Notice :exclamation:
-Due to the limitations of some browsers such as chrome (limits the grid to 1000 rows, and the excess part cannot be rendered correctly), this component is not suitable for long lists. You should use pagination when you use it to prevent the row of the page from being too long. Based on the calculation formula, the maximum height of the layout is gap * 1000. For example, if your gap is 10, then the maximum height of the layout is 10000px.
-### more detail
-Refer to https://bugs.chromium.org/p/chromium/issues/detail?id=688640
-or https://github.com/rachelandrew/gridbugs/issues/28
