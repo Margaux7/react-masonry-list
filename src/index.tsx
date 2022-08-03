@@ -47,7 +47,6 @@ const Layout: React.FC<LayoutProps> = ({
     const appendedImgStatusArray = _getAppendedImgLoadStatusArray();
     // Child containing img appended, should wait for img loading
     const needWaitImgLoading = !!appendedImgStatusArray.length;
-
     if (needWaitImgLoading) {
       _waitImgLoading(appendedImgStatusArray);
     } else {
@@ -81,7 +80,8 @@ const Layout: React.FC<LayoutProps> = ({
 
     if (null !== layoutRef.current) {
       Array.from(layoutRef.current.children).forEach((el) => {
-        const imgs = el.firstElementChild?.getElementsByTagName('img');
+        const imgs = el.getElementsByTagName('img');
+
         if (imgs?.length) {
           newImgArr.push(
             ...Array.from(imgs)
@@ -113,12 +113,22 @@ const Layout: React.FC<LayoutProps> = ({
 
   const _resizeItems = () => {
     if (null !== layoutRef.current) {
+      const container = layoutRef.current;
       const newSpanArray: number[] = [];
-      const items = Array.from(layoutRef.current.children);
+      const items = Array.from(container.children);
       items.forEach((el) => {
-        const itemHeight =
-          el.firstElementChild?.getBoundingClientRect().height || 0;
-        newSpanArray.push(Math.ceil((itemHeight + gap) / gap));
+        const firstChild = el.firstElementChild;
+        if (firstChild) {
+          (firstChild as any).style.height = 'auto';
+        }
+        const itemHeight = firstChild?.getBoundingClientRect().height || 0;
+        const gridSpan = Math.ceil((itemHeight + gap) / gap);
+        newSpanArray.push(gridSpan);
+        const gridHeight = gridSpan * gap;
+        if (firstChild) {
+          //@ts-ignore
+          firstChild.style.height = `${gridHeight - gap}px`;
+        }
       });
       setSpanArray(newSpanArray);
     }

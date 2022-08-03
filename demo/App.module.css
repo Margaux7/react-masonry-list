@@ -12,12 +12,45 @@ div {
 
 img {
   width: 100%;
-  object-fit: contain;
 }
 
 .title {
   font-size: 30px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .title {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .title:before {
+    display: none;
+  }
+
+  .link {
+    font-size: 24px;
+  }
+}
+
+.title::before {
+  flex: 1;
+  content: '';
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mode-button {
+  display: flex;
+  align-items: center;
 }
 
 .link {
@@ -40,4 +73,51 @@ img {
 
 .content {
   padding: 0 20px 20px 20px;
+}
+
+input[type='checkbox'] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggle {
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  background: grey;
+  display: block;
+  border-radius: 40px;
+  position: relative;
+}
+
+.toggle:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 100%;
+  transition: 0.2s;
+}
+
+input:checked + .toggle {
+  background: #3f85c4;
+}
+
+input:checked + .toggle:after {
+  left: calc(100% - 1px);
+  transform: translateX(-100%);
+}
+
+.toggle:active:after {
+  width: 20px;
+}
+
+label:first-child {
+  font-size: 14px;
+  margin-left: 10px;
+  color: #333;
 }

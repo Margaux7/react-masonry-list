@@ -185,8 +185,9 @@ const App = () => {
     return 3;
   };
 
-  const [items, setItems] = useState(IMGS.slice(0, 10));
+  const [items, setItems] = useState(IMGS.slice(0, 15));
   const [colCount, setColCount] = useState(_getColCount(window.innerWidth));
+  const [imgOnly, setImgOnly] = useState(false);
 
   useLayoutEffect(() => {
     const onScroll = () => {
@@ -213,7 +214,7 @@ const App = () => {
 
   return (
     <div className={style.container}>
-      <p className={style.title}>
+      <div className={style.title}>
         <a
           href='https://github.com/Margaux7/react-masonry-list'
           target='_blank'
@@ -223,17 +224,33 @@ const App = () => {
           <img src={Logo} alt='' />
           React Masonry List Demo
         </a>
-      </p>
+        <div className={style.right}>
+          <div className={style['mode-button']}>
+            <label>Image Only</label>
+            <input
+              type='checkbox'
+              id='switch'
+              value={imgOnly}
+              onChange={() => setImgOnly(!imgOnly)}
+            />
+            <label htmlFor='switch' className={style.toggle}></label>
+          </div>
+        </div>
+      </div>
       <Layout
         colCount={colCount}
         minWidth={100}
-        items={items.map((el, i) => (
-          <div key={el.imgSrc}>
-            <img src={el.imgSrc} />
-            <p className={style.id}>{i + 1}</p>
-            <p className={style.content}>{el.info}</p>
-          </div>
-        ))}
+        items={items.map((el, i) =>
+          imgOnly ? (
+            <img src={el.imgSrc} key={el.imgSrc} />
+          ) : (
+            <div key={el.imgSrc}>
+              <img src={el.imgSrc} />
+              <p className={style.id}>{i + 1}</p>
+              <p className={style.content}>{el.info}</p>
+            </div>
+          )
+        )}
       ></Layout>
     </div>
   );
