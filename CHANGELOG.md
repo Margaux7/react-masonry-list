@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://www.github.com/Margaux7/react-masonry-list/compare/v1.0.0...v1.0.1) (2022-08-03)
+
+
+### Bug Fixes
+
+* inconsistent gap sizes ([561d96b](https://www.github.com/Margaux7/react-masonry-list/commit/561d96b15554797190ce9fbbbefb7182d5cb878c))
+
 ## [1.0.0](https://www.github.com/Margaux7/react-masonry-list/compare/v0.1.6...v1.0.0) (2022-07-11)
 
 
