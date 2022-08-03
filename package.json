@@ -2,7 +2,7 @@
 	"name": "react-masonry-list",
 	"description": "A Masonry component implemented through css grid, fast and responsive.",
 	"main": "index.js",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"keywords": [
 		"react",
 		"masonry",
