@@ -16,7 +16,7 @@ const Item: React.FC<ItemProps> = (props: ItemProps) => {
         visibility: span ? 'initial' : 'hidden',
       }}
     >
-      <div>{props.children}</div>
+      {props.children}
     </div>
   );
 };
