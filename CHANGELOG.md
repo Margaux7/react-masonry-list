@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://www.github.com/Margaux7/react-masonry-list/compare/v1.0.1...v1.0.2) (2022-08-03)
+
+
+### Bug Fixes
+
+* demo url ([eaa30b8](https://www.github.com/Margaux7/react-masonry-list/commit/eaa30b8e4256418a6adbfa7d645a709d1e843ea4))
+
 ### [1.0.1](https://www.github.com/Margaux7/react-masonry-list/compare/v1.0.0...v1.0.1) (2022-08-03)
 
 
