@@ -8,7 +8,7 @@ A Masonry component implemented through [css grid](https://developer.mozilla.org
 
 ![](https://user-images.githubusercontent.com/16912880/177976842-35ca3306-33ef-44c1-ab23-b19fb2f4366f.gif)
 
-:point_right: [demo page](https://react-masonry-list-b1bkks03c-margaux7.vercel.app/)
+:point_right: [demo page](https://react-masonry-list.vercel.app/)
 
 ## Install
 `npm install react-masonry-list --save`
