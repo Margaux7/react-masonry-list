@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.3](https://www.github.com/Margaux7/react-masonry-list/compare/v1.0.2...v1.0.3) (2023-02-07)
+
+
+### Bug Fixes
+
+* syntax ([1058ca4](https://www.github.com/Margaux7/react-masonry-list/commit/1058ca4d34c3c3e0305b356b5bd2858ec4fe675c))
+
 ### [1.0.2](https://www.github.com/Margaux7/react-masonry-list/compare/v1.0.1...v1.0.2) (2022-08-03)
 
 
