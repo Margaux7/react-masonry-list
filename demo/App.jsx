@@ -3,7 +3,7 @@ import Layout from '../index';
 import style from './App.module.css';
 import Logo from './logo.png';
 
-[
+const IMGS = [
   {
     imgSrc:
       'https://user-images.githubusercontent.com/16912880/217185678-a885e886-3463-48d1-96e9-af185225fdb7.jpg\r',
