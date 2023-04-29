@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.4](https://www.github.com/Margaux7/react-masonry-list/compare/v1.0.3...v1.0.4) (2023-04-29)
+
+
+### Bug Fixes
+
+* vulnerability ([0e35a4f](https://www.github.com/Margaux7/react-masonry-list/commit/0e35a4fd966bce4ca7dbb66ebf8d710267b6ae3d))
+
 ### [1.0.3](https://www.github.com/Margaux7/react-masonry-list/compare/v1.0.2...v1.0.3) (2023-03-05)
 
 
