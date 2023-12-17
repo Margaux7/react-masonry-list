@@ -11,18 +11,20 @@ A Masonry component implemented through [css grid](https://developer.mozilla.org
 :point_right: [demo page](https://react-masonry-list.vercel.app/)
 
 ## Install
+
 `npm install react-masonry-list --save`
 
 Or use yarn
 `yarn add react-masonry-list`
 
 ## Usage
+
 ```js
-import Layout from 'react-masonry-list'
+import Layout from 'react-masonry-list';
 
 const items = [
   //...
-]
+];
 
 // If item contains img elements, don't forget set img's width. In order to get a better display effect, you can also set img's `object-fit` to `contain`.
 
@@ -30,17 +32,16 @@ const List = () => {
   return (
     <Layout
       minWidth={100}
-      items={items.map(item => (
+      items={items.map((item) => (
         <div key={item.id}>...</div>
       ))}
-    >
-    </Layout>
-  )
-}
-
+    ></Layout>
+  );
+};
 ```
 
 ### Use with NextJS
+
 Because it's a client side only component, when using it with NextJS, you need to import it by `dynamic` API:
 
 ```js
@@ -52,7 +53,7 @@ const Layout = dynamic(() => import('react-masonry-list'), {
 
 const items = [
   //...
-]
+];
 
 // If item contains img elements, don't forget set img's width. In order to get a better display effect, you can also set img's `object-fit` to `contain`.
 
@@ -60,25 +61,24 @@ const List = () => {
   return (
     <Layout
       minWidth={100}
-      items={items.map(item => (
+      items={items.map((item) => (
         <div key={item.id}>...</div>
       ))}
-    >
-    </Layout>
-  )
-}
-
+    ></Layout>
+  );
+};
 ```
 
 ## Props
 
-|name|type|required|default|description|
-|--|--|--|--|--|
-|items|react node array|No|[]|The items you want to render|
-|colCount|number|No|3|Column count|
-|gap|number|No|10|The size(px) of the gap between elements|
-|minWidth|number|No|300|The min width(px) of columns|
-|className|string|No| \ |Custom class name of layout container|
+| name      | type             | required | default | description                              |
+| --------- | ---------------- | -------- | ------- | ---------------------------------------- |
+| items     | react node array | No       | []      | The items you want to render             |
+| colCount  | number           | No       | 3       | Column count                             |
+| gap       | number           | No       | 10      | The size(px) of the gap between elements |
+| minWidth  | number           | No       | 300     | The min width(px) of columns             |
+| className | string           | No       | \       | Custom class name of layout container    |
 
 ## Browser compatibility
+
 Refer to https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns#browser_compatibility
