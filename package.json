@@ -1,76 +1,77 @@
 {
-	"name": "react-masonry-list",
-	"description": "A Masonry component implemented through css grid, fast and responsive.",
-	"main": "index.js",
-	"version": "1.0.5",
-	"keywords": [
-		"react",
-		"masonry",
-		"layout",
-		"component",
-		"grid"
-	],
-	"scripts": {
-		"serve": "yarn build && concurrently 'webpack serve --config ./webpack/webpack.demo.config.js --mode development' 'webpack --config ./webpack/webpack.config.js --watch'",
-		"lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-		"build": "webpack --config ./webpack/webpack.config.js --mode production",
-		"build:demo": "yarn build && webpack --config ./webpack/webpack.demo.config.js --mode production",
-		"prepare": "yarn build && husky install"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*.ts": [
-			"eslint . --ext --fix .js,.jsx,.ts,.tsx",
-			"git add"
-		]
-	},
-	"author": "Margaux7 <margaux7222@gmail.com>",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Margaux7/react-masonry-list.git"
-	},
-	"peerDependencies": {
-		"react": ">=16.8.0"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.15.8",
-		"@babel/preset-env": "^7.22.15",
-		"@babel/preset-react": "^7.14.5",
-		"@types/react": "^17.0.19",
-		"@typescript-eslint/eslint-plugin": "^4.29.2",
-		"@typescript-eslint/parser": "^4.29.2",
-		"babel-loader": "^8.2.3",
-		"css-loader": "^6.2.0",
-		"eslint": "^7.32.0",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-jsx-a11y": "^6.4.1",
-		"eslint-plugin-react": "^7.24.0",
-		"eslint-plugin-react-hooks": "^4.2.0",
-		"fs-extra": "^10.0.0",
-		"html-webpack-plugin": "^5.3.2",
-		"husky": "^8.0.0",
-		"lint-staged": "^13.0.3",
-		"prettier": "^2.7.1",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"source-map-loader": "^3.0.0",
-		"style-loader": "^3.2.1",
-		"ts-loader": "^9.2.6",
-		"typescript": "^4.3.5",
-		"url-loader": "^4.1.1",
-		"webpack": "^5.51.1",
-		"webpack-cli": "^4.8.0",
-		"webpack-dev-server": "^4.0.0"
-	},
-	"typings": "./dist/index.d.ts",
-	"files": [
-		"dist",
-		"LICENSE",
-		"index.js"
-	]
+  "name": "react-masonry-list",
+  "description": "A Masonry component implemented through css grid, fast and responsive.",
+  "main": "index.js",
+  "version": "1.0.5",
+  "keywords": [
+    "react",
+    "masonry",
+    "layout",
+    "component",
+    "grid"
+  ],
+  "scripts": {
+    "serve": "yarn build && concurrently 'webpack serve --config ./webpack/webpack.demo.config.js --mode development' 'webpack --config ./webpack/webpack.config.js --watch'",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "build": "webpack --config ./webpack/webpack.config.js --mode production",
+    "build:demo": "yarn build && webpack --config ./webpack/webpack.demo.config.js --mode production",
+    "prepare": "yarn build && husky install",
+    "auditfix": "npx yarn-audit-fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint . --ext --fix .js,.jsx,.ts,.tsx",
+      "git add"
+    ]
+  },
+  "author": "Margaux7 <margaux7222@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Margaux7/react-masonry-list.git"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.22.15",
+    "@babel/preset-react": "^7.14.5",
+    "@types/react": "^17.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "fs-extra": "^10.0.0",
+    "html-webpack-plugin": "^5.3.2",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "source-map-loader": "^3.0.0",
+    "style-loader": "^3.2.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.3.5",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
+  },
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "index.js"
+  ]
 }
